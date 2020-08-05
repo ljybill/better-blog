@@ -1,0 +1,21 @@
+{
+  "name": "better-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:server": "ts-node ./src/app.ts",
+    "start:web": "cd ./web && npm run serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.0",
+    "typescript": "^3.9.7"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.11.3",
+    "ts-node": "^8.10.2"
+  }
+}
