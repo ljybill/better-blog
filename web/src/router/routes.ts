@@ -1,11 +1,19 @@
 import { RouteConfig } from 'vue-router'
 import Main from '@/views/main/Main.vue'
+import ArticleList from '@/views/article/ArticleList.vue'
 
 const routes: Array<RouteConfig> = [
   {
     path: '/',
     name: 'Main',
     component: Main,
+    children: [
+      {
+        path: '/',
+        name: 'ArticleList',
+        component: ArticleList,
+      },
+    ],
   },
   {
     path: '/about',

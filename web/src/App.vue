@@ -23,6 +23,7 @@ export default class App extends Vue {
     height: 100%;
     display: flex;
     flex-direction: column;
+    padding-top: 100px;
   }
 
   .view {
