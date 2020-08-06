@@ -18,10 +18,16 @@ export default class Header extends Vue {
 <style scoped lang="less">
   @headerHeight: 100px;
   .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
     height: @headerHeight;
     padding: 0 24px;
     display: flex;
     justify-content: space-between;
+    box-shadow: 0 2px 4px 1px rgba(0, 0, 0, .3);
 
     &__desc {
       line-height: @headerHeight;
