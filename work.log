@@ -3,3 +3,7 @@
 2020年08月06日
     1. 完成了 web端的基础渲染，之后学习 https://github.com/liuboshuo/koa-decorator-router 项目，把路由给声明了，然后通过fs读取docs下的所有文件生成文章列表
     2. 初步完成 Koa 项目骨架，增加logger中间件和log日志，路由使用 routing-controllers 注解；之后目标是实现根据本地文件生成文章列表
+2020年08月09日
+    1. [server] 初步文章文章列表和文章详情的读取
+    2. [web] 增加文章详情路由，调用后端接口获取数据并渲染
+    计划：完善前端渲染
