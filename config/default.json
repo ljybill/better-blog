@@ -1,5 +1,6 @@
 {
   "log": {
     "path": "/home/work/log/better-blog"
-  }
+  },
+  "docsDir": "/Users/ljybill/code/better-blog/docs"
 }

@@ -1,11 +1,13 @@
-export default function logger() {
+import logger from '../../util/logger'
+
+export default function loggerMiddleware() {
     return async (ctx, next) => {
-        // const startTime = Date.now()
+        const startTime = Date.now()
         try {
             await next()
         } catch (err) {
             console.error(err)
         }
-        console.info('-> 123')
+        logger.info(`-> 123;duration: ${Date.now() - startTime}ms`)
     }
 }
