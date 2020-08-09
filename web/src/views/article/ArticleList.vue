@@ -1,6 +1,6 @@
 <template>
   <div class="list">
-    <article class="item" v-for="article in articleList" :key="article.id">
+    <article @click="handleArticleTaped(article)" class="item" v-for="article in articleList" :key="article.id">
       <div class="item__cover">
         <img src="//cdn.ljybill.com/avatar.png" alt="">
       </div>
@@ -15,6 +15,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import { IArticle } from '@/types'
+import { getArticles } from '@/fetch/api'
 
 @Component
 export default class ArticleList extends Vue {
@@ -50,6 +51,23 @@ export default class ArticleList extends Vue {
       summary: 'xiaomi',
     },
   ]
+
+  mounted () {
+    getArticles().then(res => {
+      this.articleList = res.data.data.map((item: string, index: number) => {
+        return {
+          id: index,
+          title: item,
+          summary: 'no',
+        }
+      })
+    })
+  }
+
+  handleArticleTaped (article: IArticle) {
+    console.log(article)
+    this.$router.push(`/article/${article.title}`)
+  }
 }
 </script>
 

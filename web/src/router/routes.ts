@@ -1,6 +1,7 @@
 import { RouteConfig } from 'vue-router'
 import Main from '@/views/main/Main.vue'
 import ArticleList from '@/views/article/ArticleList.vue'
+import ArticleDetail from '@/views/article/ArticleDetail.vue'
 
 const routes: Array<RouteConfig> = [
   {
@@ -12,6 +13,11 @@ const routes: Array<RouteConfig> = [
         path: '/',
         name: 'ArticleList',
         component: ArticleList,
+      },
+      {
+        path: '/article/:articleTitle',
+        name: 'ArticleDetail',
+        component: ArticleDetail,
       },
     ],
   },
